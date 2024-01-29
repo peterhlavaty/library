@@ -1,0 +1,7 @@
+<app-menu></app-menu>
+<h1>Add new book</h1>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit(bookForm)">
+  <input formControlName="Name" placeholder="Name">
+  <input formControlName="Author" placeholder="Author">
+  <button type="submit">Add Book</button>
+</form>

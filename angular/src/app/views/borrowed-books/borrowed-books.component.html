@@ -1,0 +1,18 @@
+<app-menu></app-menu>
+<h1>Borrowed books</h1>
+<table *ngIf="books">
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Borrowed by</th>
+    <th>Borrowed from</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{ book.Name }}</td>
+    <td>{{ book.Author }}</td>
+    <td>{{ book.Borrowed?.FirstName }} {{ book.Borrowed?.LastName }}</td>
+    <td>{{ book.Borrowed?.From }}</td>
+    <td><a class="btn" [routerLink]="'/return-book/'+book.id">Return...</a></td>
+  </tr>
+</table>
+

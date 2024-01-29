@@ -1,0 +1,7 @@
+<app-menu></app-menu>
+<h1>Borrow book</h1>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <input type="text" name="firstName" formControlName="firstName" placeholder="First Name">
+  <input type="text" name="lastName" formControlName="lastName" placeholder="Last Name">
+  <button type="submit">Borrow</button>
+</form>

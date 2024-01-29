@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<h1>Available books</h1>
+<table *ngIf=books>
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{ book.Name }}</td>
+    <td>{{ book.Author }}</td>
+    <td><a class="btn" [routerLink]="'/borrow-book/'+book.id">Borrow...</a></td>
+  </tr>
+</table>
+

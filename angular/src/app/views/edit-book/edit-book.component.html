@@ -1,0 +1,5 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="Name" placeholder="Name">
+  <input type="text" formControlName="Author" placeholder="Author">
+  <button type="submit">Update Book</button>
+</form>
